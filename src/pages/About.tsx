@@ -76,7 +76,7 @@ const About: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-2 gap-4 mb-8">
-              {t('about.techList', { returnObjects: true }).map((tech: string, index: number) => (
+              {(t('about.techList', { returnObjects: true }) as string[]).map((tech, index) => (
                 <motion.div
                   key={index}
                   className="bg-gradient-to-r from-gray-700/50 to-gray-600/50 rounded-lg p-4 border border-gray-600/50 hover:border-blue-400/50 transition-all duration-300 group"

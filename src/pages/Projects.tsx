@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import { ExternalLink, Eye } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
