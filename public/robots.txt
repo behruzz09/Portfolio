@@ -2,15 +2,14 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://bahriddinovs.vercel.app.com/sitemap.xml
 
-# Disallow admin or private areas (if any)
-Disallow: /admin/
-Disallow: /private/
-
-# Allow all other content
+# Allow all content
 Allow: /about/
 Allow: /services/
 Allow: /projects/
 Allow: /testimonials/
-Allow: /contact/ 
+Allow: /contact/
+
+# Crawl delay (optional)
+Crawl-delay: 1 
