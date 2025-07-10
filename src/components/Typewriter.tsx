@@ -39,7 +39,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
 
   return (
     <motion.span
-      className={className}
+      className={`${className} pointer-events-none`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -48,7 +48,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
       <motion.span
         animate={{ opacity: [1, 0, 1] }}
         transition={{ duration: 0.8, repeat: Infinity }}
-        className="inline-block w-0.5 h-6 bg-current ml-1"
+        className="inline-block w-0.5 h-6 bg-current ml-1 pointer-events-none"
       />
     </motion.span>
   );

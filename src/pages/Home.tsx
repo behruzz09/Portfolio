@@ -9,6 +9,16 @@ import Typewriter from '../components/Typewriter';
 const Home: React.FC = () => {
   const { t } = useTranslation();
 
+  const handlePortfolioClick = () => {
+    console.log('Portfolio button clicked');
+    console.log('Navigating to /projects');
+  };
+
+  const handleContactClick = () => {
+    console.log('Contact button clicked');
+    console.log('Navigating to /contact');
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative">
       <ParticleBackground />
@@ -52,14 +62,16 @@ const Home: React.FC = () => {
 
           {/* Action Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-30"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Link
               to="/projects"
-              className="group flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              onClick={handlePortfolioClick}
+              className="group flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer relative z-50"
+              style={{ position: 'relative', zIndex: 50 }}
             >
               <span>{t('home.viewPortfolio')}</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -67,7 +79,9 @@ const Home: React.FC = () => {
             
             <Link
               to="/contact"
-              className="group flex items-center space-x-2 border-2 border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              onClick={handleContactClick}
+              className="group flex items-center space-x-2 border-2 border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer relative z-50"
+              style={{ position: 'relative', zIndex: 50 }}
             >
               <Mail size={20} />
               <span>{t('home.contact')}</span>
@@ -77,7 +91,8 @@ const Home: React.FC = () => {
 
         {/* Decorative Elements */}
         <motion.div 
-          className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"
+          style={{ zIndex: 1 }}
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -89,7 +104,8 @@ const Home: React.FC = () => {
           }}
         />
         <motion.div 
-          className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"
+          style={{ zIndex: 1 }}
           animate={{ 
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.6, 0.3]
