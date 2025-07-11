@@ -9,6 +9,18 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: 'Edu Pearl',
+      description: 'Zamonaviy va interaktiv taʼlim platformasi: testlar, kurslar va oson boshqaruv. O‘quvchilar va o‘qituvchilar uchun qulay interfeys, tezkor natijalar va zamonaviy dizayn.',
+      image: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80',
+      liveUrl: 'https://edu-pearl.vercel.app/',
+      githubUrl: '',
+      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+      category: 'Educational Platform',
+      rating: 5,
+      client: 'Edu Pearl Team',
+      duration: '7 kun'
+    },
+    {
       title: 'Mini Studio',
       description: 'A modern web application for creative professionals to showcase their work and connect with clients. Features include portfolio management, client communication, and project tracking.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80',
@@ -19,18 +31,6 @@ const Projects: React.FC = () => {
       rating: 5,
       client: 'Creative Agency',
       duration: '5 kun'
-    },
-    {
-      title: 'IntelliTests',
-      description: 'An intelligent testing platform that provides automated assessment tools for educational institutions. Includes question bank management, automated grading, and detailed analytics.',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
-      liveUrl: 'https://intellitests.netlify.app/',
-      githubUrl: 'https://github.com/yourusername/intellitests',
-      techStack: ['React', 'Firebase', 'Tailwind CSS', 'Netlify'],
-      category: 'Educational Platform',
-      rating: 5,
-      client: 'EduTech Solutions',
-      duration: '8 kun'
     },
     {
       title: 'Vocal Pixie',
