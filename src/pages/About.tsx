@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Code, Briefcase, Star, Award, Users, Clock, Zap, CheckCircle, Trophy, Target, Heart } from 'lucide-react';
+import { Code, Briefcase, Star, Award, Users, Clock, Zap, Trophy, Target, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ProgressBar from '../components/ProgressBar';
 
@@ -119,7 +119,7 @@ const About: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="text-center bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 card-hover"

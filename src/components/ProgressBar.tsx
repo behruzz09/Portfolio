@@ -10,7 +10,6 @@ interface ProgressBarProps {
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ 
   progress, 
-  label, 
   color = "blue",
   height = 8 
 }) => {

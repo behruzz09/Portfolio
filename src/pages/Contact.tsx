@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, MessageCircle, Phone, MapPin, Send, Clock, CheckCircle, Star, Award, Users, Shield, Zap } from 'lucide-react';
+import { Mail, MessageCircle, Phone, MapPin, Send, Clock, CheckCircle, Star, Award, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Notification from '../components/Notification';
 

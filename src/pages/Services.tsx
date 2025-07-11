@@ -150,7 +150,7 @@ const Services: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="text-center bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 card-hover"

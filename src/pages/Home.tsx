@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Mail, Download, Github, Linkedin, Twitter, Award, Users, Clock, Zap, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, Mail, Github, Linkedin, Twitter, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import Lottie from 'lottie-react';
 import ParticleBackground from '../components/ParticleBackground';
@@ -91,7 +91,6 @@ const lottieData = {
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
   // Mouse position tracking
@@ -139,7 +138,6 @@ const Home: React.FC = () => {
       
       mouseX.set(x);
       mouseY.set(y);
-      setMousePosition({ x, y });
     };
 
     window.addEventListener('mousemove', handleMouseMove);

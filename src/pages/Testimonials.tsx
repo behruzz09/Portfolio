@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Quote, Award, Users, Clock, Zap, CheckCircle, ArrowRight, Heart, Target, Trophy } from 'lucide-react';
+import { Star, Quote, Award, Users, Clock, CheckCircle, ArrowRight, Heart, Target, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Testimonials: React.FC = () => {
@@ -157,7 +157,7 @@ const Testimonials: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="text-center bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 card-hover"
@@ -286,7 +286,7 @@ const Testimonials: React.FC = () => {
             Yutuqlar
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement) => (
               <motion.div
                 key={achievement.title}
                 className="text-center bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 card-hover"

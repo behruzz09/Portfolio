@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, Eye, Github, Filter, Star, Award, Clock, Users } from 'lucide-react';
+import { ExternalLink, Eye, Github, Star, Award, Clock, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Projects: React.FC = () => {
@@ -119,7 +119,7 @@ const Projects: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="text-center bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 card-hover"
@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
