@@ -15,35 +15,24 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   height = 8 
 }) => {
   const colorClasses = {
-    blue: "from-blue-500 to-blue-600",
-    green: "from-green-500 to-green-600",
-    purple: "from-purple-500 to-purple-600",
-    red: "from-red-500 to-red-600",
-    yellow: "from-yellow-500 to-yellow-600"
+    blue: "from-blue-500 to-cyan-500",
+    green: "from-green-500 to-emerald-500",
+    purple: "from-purple-500 to-pink-500",
+    red: "from-red-500 to-orange-500",
+    yellow: "from-yellow-500 to-orange-500"
   };
 
   return (
     <div className="w-full">
-      {label && (
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            {label}
-          </span>
-          <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">
-            {progress}%
-          </span>
-        </div>
-      )}
-      
       <div 
-        className="w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"
+        className="w-full bg-white/20 backdrop-blur-sm rounded-full overflow-hidden border border-white/10"
         style={{ height: `${height}px` }}
       >
         <motion.div
-          className={`h-full bg-gradient-to-r ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue} rounded-full`}
+          className={`h-full bg-gradient-to-r ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue} rounded-full shadow-lg`}
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
         />
       </div>
     </div>

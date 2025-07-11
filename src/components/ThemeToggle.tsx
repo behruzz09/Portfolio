@@ -24,14 +24,14 @@ const ThemeToggle: React.FC = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-300"
+      className="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-white/30 hover:bg-white/20 transition-all duration-300 shadow-lg"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       <motion.div
         initial={false}
         animate={{ rotate: isDark ? 0 : 180 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {isDark ? (
           <Sun size={20} className="text-yellow-500" />

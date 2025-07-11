@@ -14,8 +14,8 @@ import Contact from './pages/Contact';
 
 function App() {
   useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    // Check for saved theme preference or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.classList.toggle('dark', savedTheme === 'dark');
   }, []);
 
@@ -23,9 +23,9 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <Router>
         <GoogleAnalytics />
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white transition-colors duration-300">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-900 dark:text-white transition-colors duration-500 font-inter">
           <Navbar />
-          <main>
+          <main className="relative">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
