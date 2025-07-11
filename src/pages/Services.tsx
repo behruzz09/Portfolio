@@ -354,7 +354,7 @@ const Services: React.FC = () => {
             Nega Bizni Tanlash?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reasons.map((reason, index) => (
+            {reasons.map((reason) => (
               <motion.div
                 key={reason.title}
                 className="text-center bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 card-hover"
@@ -386,9 +386,9 @@ const Services: React.FC = () => {
             Mijozlar Fikrlari
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <motion.div
-                key={index}
+                key={testimonial.name}
                 className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 card-hover"
                 variants={itemVariants}
               >
